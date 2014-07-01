@@ -1,0 +1,11 @@
+/*
+!/Kirei
+!/.gitignore
+!/README.md
+*.rpyc
+*.bak
+*.rpyb
+log.txt
+/Kirei/game/saves/*
+/Kirei/tmp/*
+

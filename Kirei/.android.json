@@ -1,0 +1,1 @@
+{"layout": null, "name": "Pretty", "package": "com.ascend.pretty", "orientation": "landscape", "include_pil": false, "expansion": false, "source": false, "icon_name": "Pretty", "version": "1.0 Alpha", "target_version": 14, "permissions": ["VIBRATE"], "include_sqlite": false, "numeric_version": "0.1"}
