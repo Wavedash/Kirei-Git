@@ -40,7 +40,7 @@ label start:
     # The easiest way to fix that is to set the music channel to a level
     # based on a fraction of the music volume slider in the options menu.
     
-    # This is just a line I'm adding to show the github changes.
+    # Now I changed the line. This is what happens when something is removed/added.
     
     $ renpy.music.set_volume(0.4, 0, channel="music")
     
