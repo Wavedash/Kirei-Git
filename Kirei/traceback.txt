@@ -2,46 +2,40 @@
 
 While running game code:
   File "game/script.rpy", line 52, in script call
-  File "game/script_phantomShadows.rpy", line 59, in script
-AttributeError: 'NoneType' object has no attribute 'function'
+    call prologue # done
+  File "renpy/common/00start.rpy", line 81, in script
+    return
+  File "game/script.rpy", line 52, in script call
+    call prologue # done
+  File "renpy/common/00start.rpy", line 81, in script
+    return
+ScriptError: could not find label '(u'C:\\Users\\owner\\Documents\\GitHub\\Kirei-Git\\Kirei/game/script_prologue.rpy', 1404719590, 0)'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\Alexander\Google Drive\Ascend\NaNoRenO 2014\Kirei-Git\renpy\execution.py", line 294, in run
-    node.execute()
-  File "C:\Users\Alexander\Google Drive\Ascend\NaNoRenO 2014\Kirei-Git\renpy\ast.py", line 464, in execute
-    renpy.exports.say(who, what, interact=self.interact)
-  File "C:\Users\Alexander\Google Drive\Ascend\NaNoRenO 2014\Kirei-Git\renpy\exports.py", line 925, in say
-    who(what, interact=interact)
-  File "C:\Users\Alexander\Google Drive\Ascend\NaNoRenO 2014\Kirei-Git\renpy\character.py", line 812, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, **display_args)
-  File "C:\Users\Alexander\Google Drive\Ascend\NaNoRenO 2014\Kirei-Git\renpy\character.py", line 678, in do_display
-    **display_args)
-  File "C:\Users\Alexander\Google Drive\Ascend\NaNoRenO 2014\Kirei-Git\renpy\character.py", line 481, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "C:\Users\Alexander\Google Drive\Ascend\NaNoRenO 2014\Kirei-Git\renpy\ui.py", line 237, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\Alexander\Google Drive\Ascend\NaNoRenO 2014\Kirei-Git\renpy\display\core.py", line 1993, in interact
-    repeat, rv = self.interact_core(preloads=preloads, **kwargs)
-  File "C:\Users\Alexander\Google Drive\Ascend\NaNoRenO 2014\Kirei-Git\renpy\display\core.py", line 2235, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\Alexander\Google Drive\Ascend\NaNoRenO 2014\Kirei-Git\renpy\display\core.py", line 298, in visit_all
-    d.visit_all(callback)
-  File "C:\Users\Alexander\Google Drive\Ascend\NaNoRenO 2014\Kirei-Git\renpy\display\core.py", line 298, in visit_all
-    d.visit_all(callback)
-  File "C:\Users\Alexander\Google Drive\Ascend\NaNoRenO 2014\Kirei-Git\renpy\display\core.py", line 298, in visit_all
-    d.visit_all(callback)
-  File "C:\Users\Alexander\Google Drive\Ascend\NaNoRenO 2014\Kirei-Git\renpy\display\core.py", line 300, in visit_all
-    callback(self)
-  File "C:\Users\Alexander\Google Drive\Ascend\NaNoRenO 2014\Kirei-Git\renpy\display\core.py", line 2235, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\Alexander\Google Drive\Ascend\NaNoRenO 2014\Kirei-Git\renpy\display\screen.py", line 166, in per_interact
-    self.update()
-  File "C:\Users\Alexander\Google Drive\Ascend\NaNoRenO 2014\Kirei-Git\renpy\display\screen.py", line 266, in update
-    self.screen.function(**self.scope)
-AttributeError: 'NoneType' object has no attribute 'function'
+  File "C:\Users\owner\Documents\GitHub\Kirei-Git\renpy\bootstrap.py", line 285, in bootstrap
+    renpy.main.main()
+  File "C:\Users\owner\Documents\GitHub\Kirei-Git\renpy\main.py", line 349, in main
+    run(restart)
+  File "C:\Users\owner\Documents\GitHub\Kirei-Git\renpy\main.py", line 77, in run
+    renpy.execution.run_context(True)
+  File "C:\Users\owner\Documents\GitHub\Kirei-Git\renpy\execution.py", line 515, in run_context
+    context.run()
+  File "game/script.rpy", line 52, in script call
+    call prologue # done
+  File "renpy/common/00start.rpy", line 81, in script
+    return
+  File "C:\Users\owner\Documents\GitHub\Kirei-Git\renpy\ast.py", line 1286, in execute
+    next_node(renpy.game.context().lookup_return(pop=True))
+  File "game/script.rpy", line 52, in script call
+    call prologue # done
+  File "renpy/common/00start.rpy", line 81, in script
+    return
+  File "C:\Users\owner\Documents\GitHub\Kirei-Git\renpy\script.py", line 549, in lookup
+    raise ScriptError("could not find label '%s'." % str(label))
+ScriptError: could not find label '(u'C:\\Users\\owner\\Documents\\GitHub\\Kirei-Git\\Kirei/game/script_prologue.rpy', 1404719590, 0)'.
 
-Windows-post2008Server-6.2.9200
-Ren'Py 6.17.3.327
+Windows-7-6.1.7601-SP1
+Ren'Py 6.17.6.512
 Pretty 1.0
