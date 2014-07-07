@@ -1,9 +1,0 @@
-﻿I'm sorry, but errors were detected in your script. Please correct the
-errors listed below, and try again.
-
-
-File "game/script_titleSequence.rpy", line 8: is not terminated with a newline. (Check strings and parenthesis.)
-(Perhaps you left out a ' at the end of the first line.)
-        show text "{font=assets/engine/AndBasR.ttf}"goddammit, wave! just put something there. i don't even care anymore"\n\npresents{/font}" with dissolve
-
-Ren'Py Version: Ren'Py 6.17.3.327

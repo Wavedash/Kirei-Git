@@ -1,0 +1,80 @@
+﻿# First, we'll set up the function to load the sprites. This will grab the files corresponding to the character, pose, and expression.
+# It will then create an evening and night filter for both of them. Last, we crop and shrink character portraits for everything.
+
+init -9 python:
+    
+    def load_sprite(character, pose, expression):
+        filename = "assets/sprites/" + character + "/" + pose + "/" + expression + ".png"
+        tags = [ character, pose, expression]
+        filename += ".png"
+
+        if renpy.loadable(filename):
+            if pose == "default":
+                
+                #Set afternoon/indoor sprites
+                renpy.image((character, expression), filename)
+                renpy.image(("side", character, expression),
+                    im.FactorScale(im.Crop(filename, (0,0,720,325)), 0.75))
+                
+                #Set evening sprites
+                renpy.image((character, expression, "evening"),
+                    evening(filename))
+                renpy.image(("side", character, expression, "evening"),
+                    evening(im.FactorScale(im.Crop(filename, (0,0,720,325)), 0.75)))
+                
+                #Set night sprites
+                renpy.image((character, expression, "night"),
+                    night(filename))
+                renpy.image(("side", character, expression, "night"),
+                    night(im.FactorScale(im.Crop(filename, (0,0,720,325)), 0.75)))
+            else:
+                #Set afternoon/indoor sprites
+                renpy.image((character, pose, expression),
+                    filename)
+                renpy.image(("side", character, pose, expression),
+                    im.FactorScale(im.Crop(filename, (0,0,720,325)), 0.75))
+                
+                #Set evening sprites
+                renpy.image((character, pose, expression, "evening"),
+                    evening(filename))
+                renpy.image(("side", character, pose, expression, "evening"),
+                    evening(im.FactorScale(im.Crop(filename, (0,0,720,325)), 0.75)))
+                
+                #Set night sprites
+                renpy.image((character, pose, expression, "night"),
+                    night(filename))
+                renpy.image(("side", character, pose, expression, "night"),
+                    night(im.FactorScale(im.Crop(filename, (0,0,720,325)), 0.75)))
+                    
+    def night(img_in):
+        return im.MatrixColor(img_in, im.matrix.tint(0.6, 0.6, 0.7) * im.matrix.saturation(0.6))
+    
+    def evening(img_in):
+        return im.MatrixColor(img_in, im.matrix.tint(1.02, 0.95, 0.9) * im.matrix.brightness(0.05) * im.matrix.saturation(1.1))
+
+    # Character sprites
+    
+    load_sprite("kirei", "special", "shadows")
+    load_sprite("kirei", "special", "cg")
+    
+    load_sprite("kirei", "default", "smile")
+    load_sprite("kirei", "arm", "smile")
+
+    load_sprite("tomo", "default", "smile")
+    load_sprite("tomo", "default", "worried")
+    load_sprite("tomo", "hip", "smile")
+
+#Declare characters used by this game.
+define narrator = Character('', color="#000000", what_color="#DDDDDD", ctc="ctc_default", ctc_position="fixed")
+define mc = Character('protag', dynamic="true", color="#FFFF73", what_prefix="“", what_suffix="”", ctc="ctc_default", ctc_position="fixed", show_two_window=True)
+define k = Character('kirei', image="kirei", dynamic="true", color="#42A0FA", what_prefix="“", what_suffix="”", ctc="ctc_default", ctc_position="fixed", show_two_window=True)
+define t = Character('tomo', image="tomo", dynamic="true", color="#17BE7D", what_prefix="“", what_suffix="”", ctc="ctc_default", ctc_position="fixed", show_two_window=True)
+
+define mcPhone = Character('protag', dynamic="true", color="#FFFF73", what_prefix="", what_suffix="", ctc="ctc_default", ctc_position="fixed", what_font="assets/engine/phone.ttf", what_size=12, show_two_window=True)
+define kPhone = Character('kirei', dynamic="true", color="#42A0FA", what_prefix="", what_suffix="", ctc="ctc_default", ctc_position="fixed", what_font="assets/engine/phone.ttf", what_size=12, show_two_window=True)
+define tPhone = Character('tomo', dynamic="true", color="#17BE7D", what_prefix="", what_suffix="", ctc="ctc_default", ctc_position="fixed", what_font="assets/engine/phone.ttf", what_size=12)
+
+define Tomo = Character('', color="#FF0000", what_color="#FFFFFF", window_background="assets/ui/whatboxTomo.png", ctc="ctc_default", ctc_position="fixed")
+define mcTomo = Character('???', color="#00FF00", what_color="#FFFFFF", what_prefix="“", what_suffix="”", window_background="assets/ui/whatboxTomo.png", ctc="ctc_default", ctc_position="fixed", show_two_window=True)
+define kTomo = Character('Creature', image="kirei", color="#022E59", what_color="#FFFFFF", what_prefix="“", what_suffix="”", window_background="assets/ui/whatboxTomo.png", ctc="ctc_default", ctc_position="fixed", show_two_window=True)
+define tTomo = Character('???', image="tomo", color="#4E7155", what_color="#FFFFFF", what_prefix="“", what_suffix="”", window_background="assets/ui/whatboxTomo.png", ctc="ctc_default", ctc_position="fixed", show_two_window=True)
