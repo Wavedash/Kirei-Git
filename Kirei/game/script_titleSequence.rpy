@@ -5,13 +5,13 @@ label titleSequence:
     
     $ renpy.pause(2.0)
     
-    show text "{font=assets/engine/AndBasR.ttf}team tomo presents{/font}" with dissolve
+    show text "{font=assets/engine/AndBasR.ttf}rosin entertainment presents{/font}" with dissolve
     
     $ renpy.pause(3.0)
     
     hide text with dissolve
     
-    show text "{font=assets/engine/AndBasR.ttf}a\nnanoreno 2014\nlast minute challenge{/font}" with dissolve
+    show text "{font=assets/engine/AndBasR.ttf}team tomo's\nnanoreno 2014\nlast minute challenge{/font}" with dissolve
     
     $ renpy.pause(3.0)
     

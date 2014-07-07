@@ -6,6 +6,10 @@ label splashscreen:
     #such as text input, and replace it with something else.
     
     scene black
+    show rosinlogo at truecenter with dissolve 
+    $ renpy.pause(3.0)
+    hide rosinlogo with dissolve
+    
     if config.developer:
         show nanologo at truecenter
         # This checks to see if you've remembered to turn off developer mode when
@@ -39,8 +43,6 @@ label start:
     # Myth always masters his music at a volume that's super loud in Ren'Py.
     # The easiest way to fix that is to set the music channel to a level
     # based on a fraction of the music volume slider in the options menu.
-    
-    # Now I changed the line. This is what happens when something is removed/added.
     
     $ renpy.music.set_volume(0.4, 0, channel="music")
     

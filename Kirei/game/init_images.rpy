@@ -1,6 +1,7 @@
 ﻿# Declare non-background images
 image title = "assets/images/title.png"
 image nanologo ="assets/images/NaNoLoGo.png"
+image rosinlogo ="assets/images/rosinlogo.png"
 image kc = "assets/images/kc.jpg"
 image phone = "assets/images/phone.png"
 image phone night = night("assets/images/phone.png")
