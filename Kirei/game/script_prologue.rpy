@@ -15,7 +15,7 @@
     $ kireiNar = "Creature"
     $ tomoNar = "???"
     
-    Tomo "NAAAAAAAAAAANTS {w=.5} INGONYAMAAAAAAAAA {w=.5} BAGITHISI BABAAAAA?"
+    Tomo "Where are they?"
     
     Tomo "I race towards the tree line."
     
