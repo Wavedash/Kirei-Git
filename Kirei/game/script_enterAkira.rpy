@@ -14,6 +14,7 @@
     "Where am I?"
     "Oh."
     "I must’ve dozed off."
+	"And I probably shouldn't have sat so close to the bell to take a nap."
     "I stretch."
     "Math has always been boring, but sometimes the teacher can just drone on forever."
     "What’s the point of giving a lecture on precalc, anyway?"
@@ -31,7 +32,7 @@
     show bg classroom grey
     with dissolve
 
-    "Tomo. I’ve known her since we were freshman." 
+    "Tomo. I’ve known her since we were freshmen." 
     "She’s been my friend since we started high school."
     "We don’t have much in common, but for some reason, we really click."
     "It's lucky for me. I don’t make friends well."
@@ -123,7 +124,7 @@
     "She nods and reaches her hand out to me."
     "What is this girl even after? My vote for class president?"
     "No. That wouldn't make sense. We’ve only got a few months of school left."
-    
+
     play sound "assets/sfx/heartbeat.mp3"
     
     "As I grab her hand to shake, she squeezes mine and giggles."
@@ -139,7 +140,7 @@
     # "I’m sure she doesn’t actually know the gruesome details."
     "But of course I’ve heard about the sightings."
 
-    mc "I read it on a blog{nw}" # {nw} makes the game move to the next line of text right away without waiting.
+    mc "But I did see something about it. Last night I was on the Inter{nw}" # {nw} makes the game move to the next line of text right away without waiting.
     mc "Er... The news. I saw it on the news."
 
     "Smooth, [protag]. Just show her how much of a dork you are. Blog? Really?"
@@ -159,7 +160,7 @@
     "I guess even the normal ones have their dark secrets. "
     "And I guess it’s pretty cool that it’s coming from Kirei."
     "Most girls like her would never give me the time of day."
-
+    
     k "Do you wanna hang out with me after class today? I’ve got something I’d like to show you."
 
     "Show me what?"
@@ -201,7 +202,7 @@
     show tomo worry
     with dissolve
 
-    mc "You know that girl, Kirei?"
+    mc "You know that girl Kirei?"
     
     stop ambience fadeout 15
 
@@ -218,6 +219,11 @@
     t "..."
 
     mc "..."
+    
+    show tomo sass
+    
+    t "Nice try. But really, what's the story?"
+    
     mc "No idea. But she gave me her phone number."
 
     $ showphone_right()
@@ -326,11 +332,11 @@
 
     $ showphone()
 
+    "I scroll through my contacts."
+    
     "I’ll just send Kirei a text."
 
-    "I scroll through my contacts."
-
-    "It doesn’t take long. I only have four people in my phone."
+    "It doesn’t take long to find her number. I only have four people in my phone."
 
     # grab blocky font for texting and apply it to this conversation.
 

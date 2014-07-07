@@ -12,19 +12,21 @@ label cycle:
 
     mc "Wouldn’t the police be all over the place?"
 
-    k "Vampires don’t tend to leave messes behind."
+    k "Vampires don’t tend to leave messes behind, so I doubt the cops would be anywhere close."
 
-    mc "And you think we’re gonna be able to find some clues?"
+    mc "And if the \"crime scene\" is supposedly clean, how do you think we’re gonna be able to find some clues?"
 
     show kirei arm surprise with dissolve
 
     k "It’s worth a shot, right?"
+    
+    "Well... it's not like I have anything else to do today."
 
     mc "Sure. We should head out right now."
 
     show kirei concern with dissolve
 
-    k "Let’s not."
+    k "Hold on a minute... Let’s not."
 
     mc "Why not?"
 

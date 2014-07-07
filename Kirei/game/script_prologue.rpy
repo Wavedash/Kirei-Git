@@ -24,6 +24,8 @@
     
     
     Tomo "Freezing in my tracks, I spot them."
+	
+	Tomo "I've found you, but..."
     
     Tomo "I’m...{w=.5} I'm too late."
  

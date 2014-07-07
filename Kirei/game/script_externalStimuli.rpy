@@ -25,8 +25,7 @@ label externalStimuli:
     play sound "assets/sfx/schoolbell.mp3"
     $ renpy.pause(2)
     
-    "The final bell."
-    "Finally."
+    "The final bell... Finally."
     
     scene bg classroom
     with dissolve
@@ -162,7 +161,7 @@ label externalStimuli:
     "She smiles as grabs my hand and leads me away."
 
     hide kirei with dissolve
-    show tomo armdown yandere with dissolve
+    show tomo worry with dissolve
 
     t "N-no... [protagchan]."
 

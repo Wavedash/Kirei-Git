@@ -7,7 +7,7 @@ label kireisPlace:
     "The park Kirei was talking about is Circle Park."
     "It's on the way back home."
     "On the way to a lot of things, actually."
-    "Like the name implies, it's smack in the middle of town, and despite being called a \"park\", it's actually huge."
+    "Like the name implies, it's smack dab in the middle of town, and despite being called a \"park\", it's actually huge."
     "A forested area with a ton of hiking trails and some clearings here and there where the park \"features\" are."
     "But if you want to get across town on foot, the fastest way from point A to point B is through park C."
 
@@ -38,13 +38,17 @@ label kireisPlace:
     "And she’s actually talking to me."
 
     # we should add more here. make use of that background.
+    # but tim hates it
     
     show bg black with dissolve
     
-    "We walk around for a while."
-    "She tells me about how her family came to town from a larger city."
+    "As we walk around for a while, she starts tells me more about herself.
+    "About how her family came to town from a larger city."
+    "The old schools she's been to and some other simple stories."
     stop ambience fadeout 3
     "If I'm being honest, I don't really hear much of what she's saying. Her voice is kinda mesmerizing in that cartoon princess sing-song kinda way."
+    
+    # Consider actually writing this stuff out    
     
     k "And I’m fortunate enough for my parents to be paying rent."
 
@@ -145,6 +149,8 @@ label kireisPlace:
 
     show kirei arm concern with dissolve
 
+    # fuck you black guy for saying i quoted this wrong. I looked it up and straight copypasta'd it.
+    
     k "The finest trick of the devil is to persuade you he doesn’t exist."
     k "So... you could be friends with a vampire, and you wouldn’t even know it!"
 
@@ -213,6 +219,8 @@ label kireisPlace:
 
     k "Well... better to have them as a friend than an enemy, I suppose."
 
+    "I nod lightly to agree."
+    
     "..."
 
     hide kirei with dissolve
@@ -246,14 +254,15 @@ label kireisPlace:
 
     "I check my watch."
 
-    mc "It’s probably about time I’d get home."
+    mc "It’s probably about time I’d get home anyways."
 
-    "I’m pretty sure math homework isn't gonna do itself."
+    "Kirei slowly nods and smiles, standing up."
+    "I’m pretty sure my math homework isn't gonna do itself."
     "I stand up and pick my backpack up from the floor."
-
+    
     show kirei arm concern with dissolve
 
-    k "Oh, and [protag]?"
+    k "Oh, [protag]?"
     k "Can I ask you a question?"
     k "Just one last exchange before you have to go?"
 
