@@ -1,40 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00start.rpy", line 193, in script
-    python:
-  File "renpy/common/00start.rpy", line 195, in <module>
-    renpy.call_in_new_context(_restart[2])
-KeyError: u'_main_menu_screen'
+  File "game/script.rpy", line 48, in script
+    with none
+  File "game/script.rpy", line 48, in <module>
+    with none
+NameError: name 'none' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\Alexander\Documents\GitHub\Kirei-Git\renpy\bootstrap.py", line 285, in bootstrap
-    renpy.main.main()
-  File "C:\Users\Alexander\Documents\GitHub\Kirei-Git\renpy\main.py", line 349, in main
-    run(restart)
-  File "C:\Users\Alexander\Documents\GitHub\Kirei-Git\renpy\main.py", line 77, in run
-    renpy.execution.run_context(True)
-  File "C:\Users\Alexander\Documents\GitHub\Kirei-Git\renpy\execution.py", line 515, in run_context
-    context.run()
-  File "renpy/common/00start.rpy", line 193, in script
-    python:
-  File "C:\Users\Alexander\Documents\GitHub\Kirei-Git\renpy\ast.py", line 756, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\Alexander\Documents\GitHub\Kirei-Git\renpy\python.py", line 1382, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "renpy/common/00start.rpy", line 195, in <module>
-    renpy.call_in_new_context(_restart[2])
-  File "C:\Users\Alexander\Documents\GitHub\Kirei-Git\renpy\game.py", line 283, in call_in_new_context
-    return renpy.execution.run_context(False)
-  File "C:\Users\Alexander\Documents\GitHub\Kirei-Git\renpy\execution.py", line 542, in run_context
-    context.pop_all_dynamic()
-  File "renpy/common/_layout/screen_main_menu.rpym", line 29, in script
-    $ ui.interact()
-  File "C:\Users\Alexander\Documents\GitHub\Kirei-Git\renpy\execution.py", line 222, in pop_dynamic
-    del store[k]
-KeyError: u'_main_menu_screen'
+  File "game/script.rpy", line 48, in script
+    with none
+  File "C:\Users\Alexander\Documents\GitHub\Kirei-Git\renpy\ast.py", line 1180, in execute
+    trans = renpy.python.py_eval(self.expr)
+  File "C:\Users\Alexander\Documents\GitHub\Kirei-Git\renpy\python.py", line 1416, in py_eval
+    return eval(py_compile(source, 'eval'), globals, locals)
+  File "game/script.rpy", line 48, in <module>
+    with none
+NameError: name 'none' is not defined
 
 Windows-post2008Server-6.2.9200
 Ren'Py 6.17.6.512

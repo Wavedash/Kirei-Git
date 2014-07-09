@@ -43,8 +43,10 @@ label splashscreen:
 label start:
     
     # Just a little jump scare to start your day.
-        
-    scene bg park
+    
+    show bg mainmenu
+    
+    scene bg park with dissolve
         
     # Myth always masters his music at a volume that's super loud in Ren'Py.
     # The easiest way to fix that is to set the music channel to a level
