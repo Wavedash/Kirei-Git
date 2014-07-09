@@ -14,7 +14,7 @@
     "Where am I?"
     "Oh."
     "I must’ve dozed off."
-	"And I probably shouldn't have sat so close to the bell to take a nap."
+    "And I probably shouldn't have sat so close to the bell to take a nap."
     "I stretch."
     "Math has always been boring, but sometimes the teacher can just drone on forever."
     "What’s the point of giving a lecture on precalc, anyway?"

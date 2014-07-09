@@ -42,7 +42,7 @@ label kireisPlace:
     
     show bg black with dissolve
     
-    "As we walk around for a while, she starts tells me more about herself.
+    "As we walk around for a while, she tells me more about herself."
     "About how her family came to town from a larger city."
     "The old schools she's been to and some other simple stories."
     stop ambience fadeout 3

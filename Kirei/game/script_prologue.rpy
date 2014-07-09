@@ -1,6 +1,6 @@
 ﻿label prologue:
+    play sound "assets/sfx/ohdearscare.mp3"
     stop music fadeout 4
-    show bg mainmenu
     scene bg park night 
     with dissolve
     
@@ -24,8 +24,8 @@
     
     
     Tomo "Freezing in my tracks, I spot them."
-	
-	Tomo "I've found you, but..."
+
+    Tomo "I've found you, but..."
     
     Tomo "I’m...{w=.5} I'm too late."
  
