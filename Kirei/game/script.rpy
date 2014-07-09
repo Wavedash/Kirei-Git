@@ -5,31 +5,37 @@ label splashscreen:
     #This will disable anything that the android version of Ren'Py can't handle
     #such as text input, and replace it with something else.
     
+    if config.developer == False:
+        $ overriding_on = True
+    
     scene black
-    show rosinlogo at truecenter with dissolve 
-    $ renpy.pause(3.0)
-    hide rosinlogo with dissolve
     
     if config.developer:
-        show nanologo at truecenter
+        show rosinlogo at truecenter
         # This checks to see if you've remembered to turn off developer mode when
         # running the game. If it's on, it warns you.
-        show text "{font=assets/engine/AndBasR.ttf}\n\nDEVELOPER MODE IS ACTIVE{/font}"
+        show text "{font=assets/engine/AndBasR.ttf}\n\n\n\n\n\nDEVELOPER MODE IS ACTIVE{/font}"
         with dissolve
         
         $ renpy.pause(3.0)
         
         hide text
-        hide nanologo
+        hide rosinlogo
         with dissolve
         
     if not config.developer:
-        show nanologo at truecenter with dissolve 
+        show rosinlogo at truecenter with dissolve 
         $ renpy.pause(3.0)
-        hide nanologo with dissolve        
+        hide rosinlogo with dissolve  
+        
+    show nanologo at truecenter with dissolve 
+    $ renpy.pause(3.0)
+    hide nanologo with dissolve 
+
+    $ overriding_on = False
     
-    scene bg mainmenu
-    with dissolve
+    # scene bg mainmenu
+    # with dissolve
     
     return
     
@@ -37,9 +43,9 @@ label splashscreen:
 label start:
     
     # Just a little jump scare to start your day.
-    
-    play sound "assets/sfx/ohdearscare.mp3"
-    
+        
+    scene bg park
+        
     # Myth always masters his music at a volume that's super loud in Ren'Py.
     # The easiest way to fix that is to set the music channel to a level
     # based on a fraction of the music volume slider in the options menu.
@@ -49,20 +55,25 @@ label start:
     # This is basically our Table of Contents. It can be shuffled around or changed, but it
     # doesn't look for files. It looks for the scene labels INSIDE the files.
 
-    call prologue # done
-    call titleSequence # done
-    call enterAkira # done
-    call kireisPlace # done
-    call phantomShadows # done
-    call sleepyMorning # done
-    call sunblock # done
-    call interviewWith # done
-    call externalStimuli # Done
-    call cycle  # done
-    call hungry # done
-    call credits1 # done
-    call prey  # done
-    call credits2 # done
+    menu:
+        "Original NaNoRenO Version":
+            call originalVersion
+        
+        "Director's Cut":
+            call prologue # done
+            call titleSequence # done
+            call enterAkira # done
+            call kireisPlace # done
+            call phantomShadows # done
+            call sleepyMorning # done
+            call sunblock # done
+            call interviewWith # done
+            call externalStimuli # Done
+            call cycle  # done
+            call hungry # done
+            call credits1 # done
+            call prey  # done
+            call credits2 # done
 
     return
     
