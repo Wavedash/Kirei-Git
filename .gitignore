@@ -5,6 +5,7 @@
 *.rpyc
 *.bak
 *.rpyb
+thumbs.db
 log.txt
 /Kirei/game/saves/*
 /Kirei/tmp/*
